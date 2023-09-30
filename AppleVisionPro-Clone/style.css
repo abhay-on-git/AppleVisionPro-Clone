@@ -1,0 +1,174 @@
+@font-face {
+    font-family: head;
+    src: url(./sf-pro-text_regular.woff2);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: head;
+}
+html,body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+}
+main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+.page1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: burlywood; */
+    overflow: hidden;
+}
+.page1in{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* background-color: red; */
+}
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5vw;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+nav .navin{
+width: 65%;
+height: 100%;
+}
+nav .navp1{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: rgba(255, 255, 255, 0.769);
+    font-weight: 100;
+}
+nav .nav-icons{
+    width: 4vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+nav .nav-icons h4:last-child{
+    display: none;
+}
+.navp1 h5,
+.navp1 h4{
+    opacity: 1;
+    font-weight: 100;
+}
+.navp1 img{
+    opacity: 1;
+    height: 21px;
+    width: 21px;
+}
+nav .navp2{
+    width: 100%;
+    height: 60%;
+    padding: 0 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .navp2 h3{
+    opacity: 1;
+    font-size:21px;
+    font-weight: 900;
+    color: white;
+}
+nav .navp2 button{
+    padding: 5px 9px;
+    border-radius: 50px;
+    border: none;
+}
+#videoContainer1{
+    position: absolute;
+    top: -40%;
+    width: 190%;
+    height: 190%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* background-color: salmon; */
+}
+#video1{
+    /* position: absolute; */
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left 50% top 30%;
+}
+.pg1overlay{
+    position: absolute;
+}
+.page2{
+    width: 100%;
+    height: 100vh;
+    background-color: salmon;
+}
+@media (width <= 600px) {
+    nav{
+        height: 15vw;
+        padding-top:1vw ;
+    }
+    nav .navin img{
+        height: 4.1vw;
+        width: 4.1vw;
+        background-color: red;
+    }
+    nav .nav-icons{
+        width: 20vw;
+        height: 100%;
+        font-size: 3vw;
+        /* background-color: red; */
+    }
+    nav .nav-icons h4:last-child{
+        display: block;
+    }
+    nav .navin{
+        width: 100%;
+    }
+    nav .navp1{
+        height: 36%;
+        padding: 0 3vw;
+    }
+    nav .navp2{
+        height: 64%;
+        padding: 0 3vw;
+    }
+    nav .navp2 h3{
+        font-size: 18px;
+    }
+    nav h5{
+        display: none;
+    }
+    nav .navp2 button{
+        padding: 4px 9px;
+        font-size: 12px;
+    }
+}
