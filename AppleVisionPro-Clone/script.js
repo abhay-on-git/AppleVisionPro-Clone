@@ -2,17 +2,6 @@ const page1 = document.querySelector('.page1');
 const videoContainer1 = document.querySelector('#videoContainer1');
 
 // video1 Animation Code 👇
-// gsap.to('#video1',{
-//     onStart:()=>{
-//         document.querySelector('#video1').play();
-//     },
-//     scrollTrigger:{
-//         trigger:'.page1in',
-//         scroller:'body',
-//         start:'1% top',
-//         // markers:true
-//     },
-// })
 var tl1 = gsap.timeline({
     scrollTrigger:{
         trigger:'.page1in',
@@ -40,7 +29,7 @@ gsap.to('nav',{
         // markers:true
     },
 })
-var tl = gsap.timeline({
+var tl2 = gsap.timeline({
     scrollTrigger:{
         trigger:'.page1in',
         scroller:'body',
@@ -48,12 +37,66 @@ var tl = gsap.timeline({
         end:'bottom top',
         pin:true,
         scrub:1,
-        markers:true
+        // markers:true
     },
     
 })
-tl.to(videoContainer1,{
+tl2.to(videoContainer1,{
     top:'-20%',
     height:'140%',
     width:'140%',
+})
+
+
+    gsap.to('.h1',{
+    opacity:`1`,
+    ease:`ease`,
+    scrollTrigger:{
+                trigger:'.page2in',
+                scroller:'body',
+                start:'-10% top',
+                end:'top top',
+                scrub:1,
+                // markers:true
+            },
+})
+    gsap.to('#videoContainer1',{
+    opacity:`0`,
+    ease:`ease`,
+    scrollTrigger:{
+                trigger:'.page2in',
+                scroller:'body',
+                start:'-10% top',
+                end:'top top',
+                scrub:1,
+                // markers:true
+            },
+})
+
+
+gsap.to('.pg2overlay',{
+    opacity:`0`,
+    ease:`ease`,
+    scrollTrigger:{
+        trigger:'.page2in',
+        scroller:'body',
+        start:'top top',
+        end:'bottom top',
+        // pin:true,
+        scrub:1,
+        markers:true
+    }
+})
+gsap.to('.h1',{
+    top:`20%`,
+    ease:`ease`,
+    scrollTrigger:{
+        trigger:'.page2in',
+        scroller:'body',
+        start:'top top',
+        end:'bottom top',
+        pin:true,
+        scrub:1,
+        markers:true
+    }
 })
