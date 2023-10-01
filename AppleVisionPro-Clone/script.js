@@ -2,16 +2,32 @@ const page1 = document.querySelector('.page1');
 const videoContainer1 = document.querySelector('#videoContainer1');
 
 // video1 Animation Code 👇
-gsap.to('#video1',{
-    onStart:()=>{
-        document.querySelector('#video1').play();
-    },
+// gsap.to('#video1',{
+//     onStart:()=>{
+//         document.querySelector('#video1').play();
+//     },
+//     scrollTrigger:{
+//         trigger:'.page1in',
+//         scroller:'body',
+//         start:'1% top',
+//         // markers:true
+//     },
+// })
+var tl1 = gsap.timeline({
     scrollTrigger:{
         trigger:'.page1in',
         scroller:'body',
         start:'1% top',
         // markers:true
     },
+    onStart:()=>{
+        document.querySelector('#video1').play();
+    },
+})
+tl1.to('.page1in .pg1-title',{
+    delay:`1s`,
+    opacity:`0`,
+    ease:`ease`,
 })
 gsap.to('nav',{
     y:`-35%`,

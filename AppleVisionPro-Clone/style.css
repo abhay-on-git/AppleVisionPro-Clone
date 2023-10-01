@@ -38,12 +38,33 @@ main{
     overflow: hidden;
     /* background-color: red; */
 }
+.page1in .pg1-title{
+    width: fit-content;
+    height: auto;
+    position: absolute;
+    bottom: 11%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    /* background-color: red; */
+    /* z-index: 9; */
+}
+.page1in .pg1-title h2{
+    font-size: 1.4vw;
+    color: rgba(255, 255, 255, 0.769);
+    margin-bottom: 1.4vw;
+}
+.page1in .pg1-title img{
+    width: 26vw;
+    height: 4.3vw;
+}
 nav{
     position: fixed;
     top: 0;
     width: 100%;
     height: 5vw;
-    z-index: 10;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,6 +146,10 @@ nav .navp2 button{
 }
 .pg1overlay{
     position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
 }
 .page2{
     width: 100%;
