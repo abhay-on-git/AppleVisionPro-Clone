@@ -84,7 +84,7 @@ gsap.to('.pg2overlay',{
         end:'bottom top',
         // pin:true,
         scrub:1,
-        markers:true
+        // markers:true
     }
 })
 gsap.to('.h1',{
@@ -97,6 +97,6 @@ gsap.to('.h1',{
         end:'bottom top',
         pin:true,
         scrub:1,
-        markers:true
+        // markers:true
     }
 })
