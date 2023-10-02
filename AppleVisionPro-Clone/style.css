@@ -18,15 +18,17 @@ main{
     width: 100%;
     min-height: 100vh;
 }
+.page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 .page1{
     position: relative;
     width: 100%;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     /* background-color: burlywood; */
-    overflow: hidden;
 }
 .page1in{
     position: relative;
@@ -148,10 +150,6 @@ nav .navp2 button{
 .page2{
     width: 100%;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
     background-color: salmon;
 }
 .page2in{
@@ -172,6 +170,7 @@ nav .navp2 button{
 .videoContainer{
     width: 100%;
     height: 100%;
+    overflow: hidden;
     background-color: red;
 }
 video{
@@ -183,6 +182,7 @@ video{
     position: absolute;
     width: fit-content;
     height: auto;
+    text-align: center;
     bottom: 20%;
     z-index: 5;
     opacity: 0;
@@ -195,6 +195,54 @@ video{
     width: 100%;
     height: 100vh;
     background-color: aqua;
+}
+.page3in{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.pg3overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity:1;
+}
+.pg3overlay2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity:1;
+}
+.page4{
+    width: 100%;
+    height: 100vh;
+    background-color: blanchedalmond;
+}
+.page4in{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.page5{
+    width: 100%;
+    height: 100vh;
+    background-color: cadetblue;
+}
+.page5in{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 @media (width <= 600px) {
     nav{
