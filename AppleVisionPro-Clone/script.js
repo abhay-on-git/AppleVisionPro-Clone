@@ -85,10 +85,31 @@ function video2Animation(){
             scrub:1,
             // markers:true
         },
-        onStart: () => {
-            // Change z-index to 1 when animation starts
-            document.querySelector('.page2in').style.zIndex = 1;
-        },
+        // onStart: () => {
+        //     // Change z-index to 1 when animation starts
+        //     document.querySelector('.page2in').style.zIndex = 1;
+        // },
+        // onComplete: () => {
+        //     // Change z-index to 1 when animation starts
+        //     document.querySelector('.page2in').style.zIndex = 'initial';
+        // }
+    })
+
+    gsap.fromTo('.page2 .h1',
+    {
+        opacity:`1`,
+    },
+    {
+        opacity:`0`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page2in',
+            scroller:'body',
+            start:'bottom 20%',
+            end:'bottom top',
+            scrub:1,
+            // markers:true
+        }
     })
     
     gsap.to('.page2 .h1',{
@@ -104,42 +125,39 @@ function video2Animation(){
             // markers:true
         },
     })
-    
-    gsap.fromTo('.page2 .h1',
-    {
-        opacity:`1`,
-    },
-    {
-        opacity:`0.7`,
-        ease:`ease`,
-        scrollTrigger:{
-            trigger:'.page2in',
-            scroller:'body',
-            start:'bottom 10%',
-            end:'bottom top',
-            scrub:1,
-            // markers:true
-        }
-    })
 }
 video2Animation();
 
 // video3 Aniamtaion
 function video3Animation(){
     gsap.to('#videoContainer2',{
-        opacity:`0.3`,
+        opacity:`0`,
         ease:`ease`,
         scrollTrigger:{
             trigger:'.page3in',
             scroller:'body',
-            start:'-0.5% top',
+            start:'-1% top',
             end :`top top`,
             // pin:true,
-            // end:'bottom top',
             scrub:1,
             // markers:true
         }
     })
+
+    gsap.to('.pg3overlay',{
+        opacity:`0`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page3in',
+            scroller:'body',
+            start:'top top',
+            end:'bottom top',
+            // pin:true,
+            scrub:1,
+            // markers:true
+        },
+    })
+
     gsap.to('.page3 .h1',{
         opacity:`1`,
         ease:`ease`,
@@ -147,10 +165,27 @@ function video3Animation(){
                     trigger:'.page3in',
                     scroller:'body',
                     start:'top top',
-                    end:'bottom 80%',
+                    end:'bottom top',
                     scrub:1,
                     // markers:true
                 },
+    })
+
+    gsap.fromTo('.page3 .h1',
+    {
+        opacity:`1`,
+    },
+    {
+        opacity:`0`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page3in',
+            scroller:'body',
+            start:'bottom 20%',
+            end:'bottom top',
+            scrub:1,
+            // markers:true
+        }
     })
 
     gsap.to('.page3 .h1',{
@@ -166,36 +201,7 @@ function video3Animation(){
         },
     })
     
-    gsap.fromTo('.page3 .h1',
-    {
-        opacity:`1`,
-    },
-    {
-        opacity:`0.7`,
-        ease:`ease`,
-        scrollTrigger:{
-            trigger:'.page3in',
-            scroller:'body',
-            start:'bottom 10%',
-            end:'bottom top',
-            scrub:1,
-            // markers:true
-        }
-    })
 
-    gsap.to('.pg3overlay',{
-        opacity:`0`,
-        ease:`ease`,
-        scrollTrigger:{
-            trigger:'.page3in',
-            scroller:'body',
-            start:'top top',
-            end:'bottom 70%',
-            // pin:true,
-            scrub:1,
-            // markers:true
-        },
-    })
     gsap.fromTo('.pg3overlay',
     {
         opacity:`0`,
@@ -212,10 +218,226 @@ function video3Animation(){
             scrub:1,
             // markers:true
         },
-        onStart: () => {
-            // Change z-index to 1 when animation starts
-            document.querySelector('.page3in').style.zIndex = 1;
-        },
+        // onStart: () => {
+        //     // Change z-index to 1 when animation starts
+        //     document.querySelector('.page3in').style.zIndex = 1;
+        // },
+        // onComplete: () => {
+        //     // Change z-index to 1 when animation starts
+        //     document.querySelector('.page3in').style.zIndex = 'initial';
+        // }
     })
 }
 video3Animation();
+
+function video4Animation(){
+    gsap.to('#videoContainer3',{
+        opacity:`0`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page4in',
+            scroller:'body',
+            start:'-1% top',
+            end :`top top`,
+            scrub:1,
+            // markers:true
+        }
+    })
+    gsap.to('.page4 .h1',{
+        opacity:`1`,
+        ease:`ease`,
+        scrollTrigger:{
+                    trigger:'.page4in',
+                    scroller:'body',
+                    start:'top top',
+                    end:'bottom 80%',
+                    scrub:1,
+                    // markers:true
+                },
+    })
+
+    gsap.to('.page4 .h1',{
+        top:`20%`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page4in',
+            scroller:'body',
+            start:'top top',
+            end:'bottom top',
+            scrub:1,
+            // markers:true
+        },
+    })
+    
+    gsap.fromTo('.page4 .h1',
+    {
+        opacity:`1`,
+    },
+    {
+        opacity:`0`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page4in',
+            scroller:'body',
+            start:'bottom 10%',
+            end:'bottom top',
+            scrub:1,
+            // markers:true
+        }
+    })
+
+    gsap.to('.pg4overlay',{
+        opacity:`0`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page4in',
+            scroller:'body',
+            start:'top top',
+            end:'bottom 70%',
+            scrub:1,
+            // markers:true
+        },
+    })
+    gsap.fromTo('.pg4overlay',
+    {
+        opacity:`0`,
+    },
+    {
+        opacity:`0.3`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page4in',
+            scroller:'body',
+            start:'top top',
+            end:'bottom top',
+            pin:true,
+            scrub:1,
+            // markers:true
+        },
+        // onStart: () => {
+        //     // Change z-index to 1 when animation starts
+        //     document.querySelector('.page4in').style.zIndex = 1;
+        // },
+        // onComplete: () => {
+        //     // Change z-index to 1 when animation starts
+        //     document.querySelector('.page4in').style.zIndex = 'initial';
+        // }
+    })
+}
+video4Animation();
+
+// video5 Animation code
+function video5Animation(){
+    gsap.to('#videoContainer4',{
+        opacity:`0`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page5in',
+            scroller:'body',
+            start:'-1% top',
+            end :`top top`,
+            scrub:1,
+            // markers:true
+        }
+    })
+    var tl3 = gsap.timeline();
+    tl3.fromTo('.page5 #pg5h1a',
+    {
+        bottom:`-15%`,
+    },
+    {
+        opacity:`1`,
+        ease:`ease`,
+        scrollTrigger:{
+                    trigger:'.page5in',
+                    scroller:'body',
+                    start:'top top',
+                    end:'bottom 80%',
+                    scrub:1,
+                    // markers:true
+                },
+    })
+
+    tl3.to('.page5 #pg5h1a',
+    {
+        top:`-15%`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page5in',
+            scroller:'body',
+            start:'bottom 80%',
+            end:'bottom 45%',
+            scrub:1,
+            // markers:true
+        },
+    })
+    tl3.fromTo('.page5 #pg5h1b',
+    {
+        bottom:`-10%`,
+    },
+    {
+        opacity:`1`,
+        ease:`ease`,
+        scrollTrigger:{
+                    trigger:'.page5in',
+                    scroller:'body',
+                    start:'bottom 60%',
+                    end:'bottom 40%',
+                    scrub:1,
+                    // markers:true
+                },
+    })
+
+    tl3.to('.page5 #pg5h1b',
+    {
+        top:`-10%`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page5in',
+            scroller:'body',
+            start:'bottom 20%',
+            end:'bottom top',
+            scrub:1,
+            // markers:true
+        },
+    })
+    
+    gsap.to('.pg5overlay',{
+        opacity:`0`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page5in',
+            scroller:'body',
+            start:'top top',
+            end:'bottom 50%',
+            scrub:1,
+            // markers:true
+        },
+    })
+    gsap.fromTo('.pg5overlay',
+    {
+        opacity:`0`,
+    },
+    {
+        opacity:`0.1`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page5in',
+            scroller:'body',
+            start:'top top',
+            end:'bottom top',
+            pin:true,
+            scrub:1,
+            // markers:true
+        },
+        // onStart: () => {
+        //     // Change z-index to 1 when animation starts
+        //     document.querySelector('.page4in').style.zIndex = 1;
+        // },
+        // onComplete: () => {
+        //     // Change z-index to 1 when animation starts
+        //     document.querySelector('.page4in').style.zIndex = 'initial';
+        // }
+    })
+}
+video5Animation();
