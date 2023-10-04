@@ -340,13 +340,44 @@ video{
   font-weight: 300;
 }
 
-
+/* Page7 Styles */
 .page7{
     width: 100%;
     height: 100vh;
     background-color: gray;
 }
-
+.page7in{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    }
+.pg7overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity:1;
+}
+.page7in .h1{
+    width: 60%;
+    opacity: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.page7in .h1 h1{
+  font-size: 5.2vw;
+  line-height: 6vw;
+  font-weight: 1000;
+  white-space: nowrap;
+}
+.page7in .h1 h2{
+    color: white;
+    font-weight: 900;
+}
 
 
 
