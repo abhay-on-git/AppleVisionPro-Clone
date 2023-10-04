@@ -441,3 +441,116 @@ function video5Animation(){
     })
 }
 video5Animation();
+
+// Page6 Animation code
+function page6Animation(){
+    gsap.to('#videoContainer5',{
+        opacity:`0`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page6in',
+            scroller:'body',
+            start:'-5% top',
+            end :`top top`,
+            scrub:1,
+            // markers:true
+        }
+    })
+    var tl4 = gsap.timeline();
+    tl4.from('.page6in #pg6img1',
+    {
+        y:`600%`,
+        ease:`ease`,
+        scrollTrigger:{
+                    trigger:'.page6in',
+                    scroller:'body',
+                    start:'top top',
+                    end:'bottom 40%',
+                    scrub:1,
+                    // markers:true
+                },
+    })
+
+    tl4.from('.page6 h2',
+    {
+        opacity:`0`,
+        y:`1500%`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page6in',
+            scroller:'body',
+            start:'top top',
+            end:'bottom 40%',
+            scrub:1,
+            // markers:true
+        },
+    })
+    tl4.from('.page6 p',
+    {
+        opacity:`0`,
+        y:`1600%`,
+        ease:`ease`,
+        scrollTrigger:{
+                    trigger:'.page6in',
+                    scroller:'body',
+                    start:'top -5%',
+                    end:'bottom 40%',
+                    scrub:1,
+                    // markers:true
+                },
+    })
+
+    tl4.from('.page6 #pg6img2',
+    {
+        y:`100%`,
+        ease:`Expo.ease`,
+        scrollTrigger:{
+            trigger:'.page6in',
+            scroller:'body',
+            start:'top -10%',
+            end:'bottom top',
+            scrub:1,
+            // markers:true
+        },
+    })
+    
+    gsap.to('.pg6overlay',{
+        opacity:`0`,
+        ease:`ease`,
+        scrollTrigger:{
+            trigger:'.page6in',
+            scroller:'body',
+            start:'top top',
+            end:'bottom top',
+            scrub:1,
+            pin:true,
+            // markers:true
+        },
+    })
+    // gsap.fromTo('.pg5overlay',
+    // {
+    //     opacity:`0`,
+    // },
+    // {
+    //     opacity:`0.1`,
+    //     ease:`ease`,
+    //     scrollTrigger:{
+    //         trigger:'.page5in',
+    //         scroller:'body',
+    //         start:'top top',
+    //         end:'bottom top',
+    //         pin:true,
+    //         scrub:1,
+    //         // markers:true
+    //     },
+        // onStart: () => {
+        //     // Change z-index to 1 when animation starts
+        //     document.querySelector('.page4in').style.zIndex = 1;
+        // },
+        // onComplete: () => {
+        //     // Change z-index to 1 when animation starts
+        //     document.querySelector('.page4in').style.zIndex = 'initial';
+        // }
+    // })
+}
+page6Animation();
