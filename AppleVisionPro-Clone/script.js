@@ -557,28 +557,30 @@ page6Animation();
 
 // page7 Animation code
 function page7Animation(){
-gsap.to('.page7 .h1',{
+var tl5 = gsap.timeline();
+tl5.to('.page7 .h1',{
     y:`-250%`,
     ease:`ease`,
     scrollTrigger:{
         trigger:`.page7in`,
         scroller:`body`,
         start:`top top`,
-        end:`bottom 30%`,
+        end:`bottom 50%`,
         scrub:1,
         pin:true,
     }
 })
-gsap.to('#videoContainer6',{
-    scale:`0.09`,
+tl5.to(['#videoContainer6','.pg7overlay'],{
+    width:`90%`,
     ease:`ease`,
     scrollTrigger:{
         trigger:`.page7in`,
         scroller:`body`,
-        start:`top -10%`,
+        start:`top -30%`,
         end:`bottom top`,
         scrub:1,
         // pin:true,
+        // markers:true
     }
 })
 }
