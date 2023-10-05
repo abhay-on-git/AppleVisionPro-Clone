@@ -524,4 +524,68 @@ video{
     .h1 h1{
         font-size: 4vw;
     }
+    .pg6Content{
+        width: 100%;
+        height: 40vw;
+    }
+    .pg6imgdiv{
+        width: 100%;
+        height: 55vw;
+    }
+    .pg6imgdiv img{
+        width: 90%;
+        height: 90%;
+        z-index: 10;
+    }
+    .page6in{
+        height: auto;
+        padding:5vw 0;
+        overflow: hidden;
+    }
+    .pg6btn{
+        border: 1px solid black;
+    }
+    .pg6btn h2{
+        font-size: 2vw;
+        font-weight: 600;
+    }
+    .staticpgContent{
+        height: 65vw;
+    }
+    .staticpgContentin{
+        flex-direction: column;
+    }
+    .staticpgContentinp1{
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+    }
+    .staticpgContentinp1 h1{
+        width: 100%;
+        font-size: 3.3vw;
+    }
+    .staticpgContentinp2{
+        position: relative;
+        padding: 3vw 0;
+        width: 100%;
+    }
+    .staticpgContentinp2 p{
+        font-size: 3vw;
+    }
+    .staticpgContentinp2 button{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0);
+        padding: 2vw 2.5vw;
+        bottom: 1%;
+        margin-top: 2vw;
+    }
+    .orangebtn h2{
+      font-size: 2.5vw;
+      font-weight:300;
+      white-space: nowrap;
+    }
+    .orangebtn h2 i{
+        font-size: 2.5vw;
+    }
 }

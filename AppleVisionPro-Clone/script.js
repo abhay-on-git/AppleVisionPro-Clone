@@ -477,7 +477,7 @@ function page6Animation(){
                 },
     })
 
-    tl4.from('.page6 h2',
+    tl4.from('.pg6Content h2',
     {
         opacity:`0`,
         y:`1500%`,
@@ -1076,7 +1076,7 @@ function page6Animation(){
                 },
     })
 
-    tl4.from('.page6 h2',
+    tl4.from('.pg6Content h2',
     {
         opacity:`0`,
         y:`1500%`,
@@ -1108,6 +1108,20 @@ function page6Animation(){
     tl4.from('.page6 #pg6img2',
     {
         y:`100%`,
+        ease:`Expo.ease`,
+        scrollTrigger:{
+            trigger:'.page6in',
+            scroller:'body',
+            start:'top -10%',
+            end:'bottom top',
+            scrub:1,
+            // markers:true
+        },
+    })
+    tl4.from('.pg6btn',
+    {
+        display:`block`,
+        y:`200%`,
         ease:`Expo.ease`,
         scrollTrigger:{
             trigger:'.page6in',
