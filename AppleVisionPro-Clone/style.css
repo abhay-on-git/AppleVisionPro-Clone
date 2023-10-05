@@ -518,4 +518,10 @@ video{
         padding: 4px 9px;
         font-size: 12px;
     }
+    #videoContainer1{
+        width: 400%;
+    }
+    .h1 h1{
+        font-size: 4vw;
+    }
 }
