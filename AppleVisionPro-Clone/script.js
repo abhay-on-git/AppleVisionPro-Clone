@@ -555,14 +555,14 @@ function page6Animation(){
 }
 page6Animation();
 
-// page7 Animation code
-function page7Animation(){
+// Static Page Animation code
+function staticPageAnimation(pageInDiv , h1InPageNo , videoContainer , pageNoOverlay){
 var tl5 = gsap.timeline();
-tl5.to('.page7 .h1',{
+tl5.to(h1InPageNo,{
     y:`-250%`,
     ease:`ease`,
     scrollTrigger:{
-        trigger:`.page7in`,
+        trigger:pageInDiv,
         scroller:`body`,
         start:`top top`,
         end:`bottom 50%`,
@@ -570,18 +570,24 @@ tl5.to('.page7 .h1',{
         pin:true,
     }
 })
-tl5.to(['#videoContainer6','.pg7overlay'],{
+tl5.to([videoContainer,pageNoOverlay],{
     width:`90%`,
     ease:`ease`,
     scrollTrigger:{
-        trigger:`.page7in`,
+        trigger:pageInDiv,
         scroller:`body`,
         start:`top -30%`,
         end:`bottom top`,
         scrub:1,
-        // pin:true,
         // markers:true
     }
 })
 }
-page7Animation();
+
+function staticPageAnimationCalls(){
+    staticPageAnimation('.page7in','.page7 .h1','#videoContainer6','.pg7overlay');
+    staticPageAnimation('.page8in','.page8 .h1','#videoContainer7','.pg8overlay');
+    staticPageAnimation('.page9in','.page9 .h1','#videoContainer8','.pg9overlay');
+    staticPageAnimation('.page10in','.page10 .h1','#videoContainer9','.pg10overlay');
+}
+staticPageAnimationCalls();

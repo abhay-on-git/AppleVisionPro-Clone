@@ -272,7 +272,7 @@ video{
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding-bottom: 1vw;
+    padding-bottom: 12vw;
     }
 .pg6overlay{
     position: absolute;
@@ -332,7 +332,7 @@ video{
 }
 .pg6btn{
     padding: 1vw 3vw;
-    margin-top: 1.2vw;
+    margin-top: 1.5vw;
     border: solid black 2px;
     border-radius: 50px;
     background-color: white;
@@ -341,13 +341,42 @@ video{
   font-weight: 300;
 }
 
-/* Page7 Styles */
+/* Page7 Styles staticPage */
 .page7{
     width: 100%;
     min-height: 100vh;
     background-color: white;
 }
-.page7in{
+/* page8 styles staticPage */
+.page8{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+#pg8Contentp1 h1{
+ width: 65%;
+}
+
+/* page9 styles staticPage */
+.page9{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+/* page10 styles staticPage */
+.page10{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+#pg10Contentp1 h1{
+    width: 70%;
+}
+
+/*👇 Following are the Comman styles for the static pages*/
+
+#staticpagein{
     position: relative;
     display: flex;
     align-items: center;
@@ -355,37 +384,39 @@ video{
     width: 100%;
     height: 100%;
     }
-.pg7overlay{
+
+#staticpgoverlay{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0,0.5);
     opacity:1;
 }
-.page7in .h1{
+#staticpagein .h1{
+    position: absolute;
     width: 60%;
     opacity: 1;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
 }
-.page7in .h1 h1{
+#staticpagein .h1 h1{
   font-size: 5.2vw;
   line-height: 6vw;
   font-weight: 1000;
   white-space: nowrap;
 }
-.page7in .h1 h2{
+#staticpagein .h1 h2{
     color: white;
     font-weight: 900;
 }
-.pg7Content{
+.staticpgContent{
     width: 100%;
     height: 35vw;
     padding: 6vw 10vw;
     background-color: white;
 }
-.pg7Contentin{
+.staticpgContentin{
     width: 100%;
     height: 100%;
     display: flex;
@@ -393,7 +424,7 @@ video{
     justify-content: center;
     /* background-color: yellow; */
 }
-.pg7Contentinp1{
+.staticpgContentinp1{
     width:40%;
     height: 100%;
     display: flex;
@@ -401,10 +432,10 @@ video{
     justify-content: center;
     /* background-color: salmon; */
 }
-.pg7Contentinp1 h1{
+.staticpgContentinp1 h1{
     width: 55%;
 }
-.pg7Contentinp2{
+.staticpgContentinp2{
     width:60%;
     height: 100%;
     display: flex;
@@ -413,36 +444,29 @@ video{
     justify-content: start;
     /* background-color: rebeccapurple; */
 }
-.pg7Contentinp2 p{
+.staticpgContentinp2 p{
     width: 85%;
     color: #86868B;
     font-size: 1.4vw;
     font-weight: 900;
 }
-.pg7btn{
+.orangebtn{
     padding: 0.7vw 1.9vw;
     margin-top: 3.5vw;
     border: none;
     border-radius: 50px;
     background-color: #FF5A00;
 }
-.pg7btn h2{
+.orangebtn h2{
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 5  00;
 }
-.pg7btn h2 i{
+.orangebtn h2 i{
   font-size: 1.9vw;
   font-weight: 400;
-}
-
-/* page8 styles */
-.page8{
-    width: 100%;
-    min-height: 100vh;
-    background-color: gray;
 }
 
 
