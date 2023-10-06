@@ -1121,8 +1121,8 @@ function page6Animation(){
     tl4.from('.pg6btn',
     {
         display:`block`,
-        y:`200%`,
-        ease:`Expo.ease`,
+        y:`210%`,
+        ease:`ease`,
         scrollTrigger:{
             trigger:'.page6in',
             scroller:'body',

@@ -1,6 +1,6 @@
 @font-face {
     font-family: head;
-    src: url(./sf-pro-text_regular.woff2);
+    src: url(./sf-pro-display_bold.woff2);
 }
 *{
     margin: 0;
@@ -469,6 +469,44 @@ video{
   font-weight: 400;
 }
 
+/* page11 styles */
+.page11{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F5F5F7;
+    /* background-color: red; */
+}
+.pg11Content{
+    width: 100%;
+    height: auto;
+    padding-top: 12vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: yellow; */
+}
+.pg11Content h3{
+   font-size: 1.5vw;
+   margin-bottom: 1vw;
+}
+.pg11Content h1{
+   font-size: 5vw;
+   font-weight: 1000;
+   margin-bottom: 3vw;
+}
+.pg11Content p{
+    width: 50%;
+    line-height: 2vw;
+   font-size: 1.5vw;
+   color: #86868B;
+}
+canvas{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}
 
 
 
@@ -533,8 +571,8 @@ video{
         height: 55vw;
     }
     .pg6imgdiv img{
-        width: 90%;
-        height: 90%;
+        width: 80%;
+        height: 80%;
         z-index: 10;
     }
     .page6in{
