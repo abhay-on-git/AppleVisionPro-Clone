@@ -474,7 +474,7 @@ video{
     position: relative;
     width: 100%;
     height: auto;
-    background-color: #F5F5F7;
+    /* background-color: #F5F5F7; */
     /* background-color: red; */
 }
 .pg11Content{
@@ -504,11 +504,18 @@ video{
    font-size: 1.5vw;
    color: #86868B;
 }
+
 canvas{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: red;
+    z-index: 10;
+    /* background-color: red; */
+}
+.canvasbgpgs{
+    width: 100%;
+    height: 100vh;
+    background-color: burlywood;
 }
 
 
