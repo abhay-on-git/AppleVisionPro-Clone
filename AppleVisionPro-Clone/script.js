@@ -595,6 +595,35 @@ function staticPageAnimationCalls(){
 }
 staticPageAnimationCalls();
 
+// Canvas WallPaper Code
+function canvasWallpaperAnimation (){
+    var tl = gsap.timeline();
+   tl.to(['#pg12img'],{
+    transform:`scale(0.8)`,
+    scrollTrigger:{
+        trigger:`#pg12img`,
+        start:`top 40%`,
+        end:`20% 20%`,
+        scroller:`body`,
+        scrub:1,
+        // markers:true,
+    }
+   })
+   tl.to(['#pg12img'],{
+    opacity:`0`,
+    ease:`ease`,
+    scrollTrigger:{
+        trigger:`#pg12img`,
+        start:`top 20%`,
+        end:`top top`,
+        scroller:`body`,
+        scrub:1,
+        // markers:true,
+    }
+   })
+}
+canvasWallpaperAnimation();
+
 // Canvas Code
 function canvas(){
     const canvas = document.querySelector("#canvas1");
@@ -612,7 +641,6 @@ function canvas(){
     
     function files(index) {
       var data = `
-https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0000.jpg
 https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0199.jpg
 https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0100.jpg
 https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0050.jpg
@@ -832,13 +860,13 @@ https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860
     gsap.to(imageSeq, {
       frame: frameCount - 1,
       snap: "frame",
-      ease: `none`,
+      ease: `ease`,
       scrollTrigger: {
         scrub: 1,
         trigger: canvas,
         //   set start end according to preference
         start: `top top`,
-        end: `600% top`,
+        end: `500% top`,
         scroller: `body`,
         // markers:true
       },
@@ -874,14 +902,13 @@ https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860
     // Ensure GSAP is properly initialized and imported
 
 // Pin the canvas using GSAP
-gsap.to(canvas, {
-    scrollTrigger: {
+ScrollTrigger.create({
       trigger: canvas,  // Use the canvas itself as the trigger
       start: "top top",  // Start pinning when the top of the canvas reaches the top of the viewport
       end: "600% top",  // Stop pinning when the bottom of the canvas reaches the top of the viewport
       pin: true,
+      scroller:`body`,
       markers:true
-    }
   });
   
 }
