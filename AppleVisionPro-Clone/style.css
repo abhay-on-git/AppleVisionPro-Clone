@@ -474,8 +474,7 @@ video{
     position: relative;
     width: 100%;
     min-height: 100vh;
-    /* background-color: #F5F5F7; */
-    /* background-color: red; */
+    background-color: #F5F5F7;
 }
 .pg11Content{
     position: relative;
@@ -487,7 +486,7 @@ video{
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 .pg11Content h3{
    font-size: 1.5vw;
@@ -510,7 +509,7 @@ video{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: saddlebrown;
+    background-color: #F5F5F7;
     overflow: visible;
 }
 #page12>img{
@@ -530,9 +529,32 @@ canvas{
     transform: scale(1.35);
 }
 .canvasbgpgs{
+    position: relative;
     width: 100%;
     height: 100vh;
-    background-color: burlywood;
+    background-color: #F5F5F7;
+}
+.canvasbgpgs span{
+    color: black;
+}
+#lefth3{
+    position: absolute;
+    line-height: 1.6vw;
+    left: 10%;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 15%;
+    z-index: 16;
+    color: #9A9A9F;
+}
+#righth3{
+    position: absolute;
+    right: 7%;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 15%;
+    z-index: 16;
+    color: #9A9A9F;
 }
 
 .page19{
@@ -663,5 +685,25 @@ canvas{
     }
     .orangebtn h2 i{
         font-size: 2.5vw;
+    }
+    .pg11Content{
+        padding-top:20vw ;
+    }
+    .pg11Content h3{
+        font-size: 3.5vw;
+    }
+    .pg11Content h1{
+        font-size: 8vw;
+    }
+    .pg11Content p{
+        width: 75%;
+        line-height: 2.5vw;
+        font-size: 2vw;
+    }
+    #pg12img{
+        transform: scale(0.8);
+    }
+    .canvasbgpgs h3{
+        font-size: 1.5vw;
     }
 }
