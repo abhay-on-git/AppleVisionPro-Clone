@@ -592,6 +592,7 @@ function staticPageAnimationCalls(){
     staticPageAnimation('.page8in','.page8 .h1','#videoContainer7','.pg8overlay');
     staticPageAnimation('.page9in','.page9 .h1','#videoContainer8','.pg9overlay');
     staticPageAnimation('.page10in','.page10 .h1','#videoContainer9','.pg10overlay');
+    staticPageAnimation('.page21in','.page21 .h1','#pg21videoContainer','.pg21overlay');
 }
 staticPageAnimationCalls();
 
@@ -1546,6 +1547,7 @@ function staticPageAnimationCalls(){
     staticPageAnimation('.page8in','.page8 .h1','#videoContainer7','.pg8overlay');
     staticPageAnimation('.page9in','.page9 .h1','#videoContainer8','.pg9overlay');
     staticPageAnimation('.page10in','.page10 .h1','#videoContainer9','.pg10overlay');
+    staticPageAnimation('.page21in','.page21 .h1','#pg21videoContainer','.pg21overlay');
 }
 staticPageAnimationCalls();
 
