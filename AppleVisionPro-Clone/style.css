@@ -413,7 +413,7 @@ video{
 }
 .staticpgContent{
     width: 100%;
-    height: 35vw;
+    height: 30vw;
     padding: 6vw 10vw;
     background-color: white;
 }
@@ -561,7 +561,7 @@ canvas{
 .page19{
     position: relative;
     width: 100%;
-    height: 200vh;
+    min-height: 200vh;
     background-color: white;
    
 }
@@ -585,13 +585,13 @@ canvas{
     width: 45%;
     height: 90%;
     background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/design/glass_top__k3b8lzqd1l2m_large.jpg);
-    background-color: red;
+    background-size: cover;
 }
 .pg19inp1b{
     width: 45%;
     height: 90%;
     background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/design/glass_side__gm4agomrwl2e_large.jpg);
-    background-color: blue;
+    background-size: cover;
 }
 .pg19inp2{
     width: 100%;
@@ -601,9 +601,96 @@ canvas{
     justify-content: center;
     background-color: white;
 }
-.pg19inp2 .videoContainer{
+#pg19videoContainer{
     width: 93%;
     height: 93%;
+}
+.page20{
+    position: relative;
+    width: 100%;
+    min-height: 180vh;
+    background-color: red;
+}
+.pg20in{
+    position: absolute;
+    width: 100%;
+    min-height: 180vh;
+    background-color:white;
+    z-index: 15;
+    overflow: hidden;
+}
+.pg20inp1{
+    width: 100%;
+    height: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+.pg20inp1 h3{
+    color: #9A9A9F;
+    width: 45%;
+    text-align: center;
+    line-height: 2vw;
+    font-size: 1.4vw;
+}
+.pg20inp1 span{
+    color: black;
+}
+.pg20inp2{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pg20inp2 button{
+    position: absolute;
+    bottom: 10%;
+}
+
+.page21{
+    width: 100%;
+    min-height: 100vh;
+}
+.page21in{
+    background-color: white;
+}
+.page21 .staticpgContentinp1 h1{
+    width: 70%;
+}
+.pg21overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity:0;
+}
+.page22{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+.page22imgdiv{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+}
+.page22img1{
+    width: 45%;
+    height: 90vh;
+    background-color: beige;
+    background-size: cover;
+    background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/visionos/scaling_ui__gosi0305um2y_large.jpg);
+}
+.page22img2{
+    width: 45%;
+    height: 90vh;
+    background-size: cover;
+    background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/visionos/spatial_interaction__br11mf88bzxy_large.jpg);
 }
 
 
@@ -740,5 +827,51 @@ canvas{
     }
     .canvasbgpgs h3{
         font-size: 1.5vw;
+    }
+    .pg19inp1{
+      flex-direction: column;
+    }
+    .pg19inp1a{
+      height: 50%;
+      width: 90%;
+      margin-top: 6vw;
+    }
+    .pg19inp1b{
+     margin-top: 6vw;
+     height: 50%;
+      width: 90%;
+    }
+    .pg19inp2{
+        margin-top: 4vw;
+      }
+
+    .pg20inp1{
+        height: 60vw;
+    }
+    .pg20inp1 h3{
+        width: 73%;
+        font-size: 2.7vw;
+        line-height: 3vw;
+    }
+    .pg20inp2 img{
+        margin-top: 25vw;
+        padding-bottom: 0;
+        width: 90%;
+    }
+    .page20 button{
+        bottom: -15%;
+    }
+    .page22imgdiv{
+      flex-direction: column;
+    }
+    .page22img1{
+        height: 50vh;
+        width: 90%;
+        margin-top: 6vw;
+    }
+    .page22img2{
+        height: 50vh;
+        width: 90%;
+        margin-top: 6vw;
     }
 }
