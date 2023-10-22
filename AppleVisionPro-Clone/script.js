@@ -599,8 +599,8 @@ staticPageAnimationCalls();
 // Canvas WallPaper Code
 function canvasWallpaperAnimation (){
     var tl = gsap.timeline();
-   tl.to(['#pg12img'],{
-    transform:`scale(0.8)`,
+   tl.to('#pg12img',{
+    transform:`scale(1)`,
     ease:`ease`,
     scrollTrigger:{
         trigger:`#pg12img`,
@@ -611,7 +611,7 @@ function canvasWallpaperAnimation (){
         // markers:true,
     }
    })
-   tl.to(['#pg12img'],{
+   tl.to('#pg12img',{
     opacity:`0`,
     ease:`ease`,
     scrollTrigger:{
@@ -626,8 +626,8 @@ function canvasWallpaperAnimation (){
 }
 canvasWallpaperAnimation();
 
-// Canvas Code
-function canvas(){
+// Canvas1 Code
+function canvas1(){
     const canvas = document.querySelector("#canvas1");
     const context = canvas.getContext("2d");
     
@@ -914,9 +914,9 @@ ScrollTrigger.create({
   });
   
 }
-canvas();
+canvas1();
 
-// Canvas bgpgs-h3 Animation Code
+// Canvas1 bgpgs-h3 Animation Code
 function canvasBgpgsH3Animation() {
     const canvasBgPgsH3 = document.querySelectorAll('.canvasbgpgs h3');
 
@@ -934,8 +934,201 @@ function canvasBgpgsH3Animation() {
         });
     });
 }
-
 canvasBgpgsH3Animation();
+
+// Swiper Code
+function swiperCode(){
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        speed:1000,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+}
+swiperCode();
+
+// Canvas2 code
+function canvas2(){
+    const canvas = document.querySelector("#canvas2");
+    const context = canvas.getContext("2d");
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    
+    window.addEventListener("resize", function () {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      render();
+    });
+    
+    function files(index) {
+      var data = `
+      https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/displays/parts_0007__b95s4g085uuu_large.png
+      https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/displays/parts_0006__enypileapsa6_large.png
+      https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/displays/parts_0004__fq0enfas7sia_large.png
+      https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/displays/parts_0003__cneophpf8hw2_large.png
+      https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/displays/parts_0002__fspgzjetnpm6_large.png
+      https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/displays/parts_0000__b5n7ez3p2seq_large.png
+      https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/displays/startframe__fk6tsxxwncyi_large.png
+     `;
+      return data.split("\n")[index];
+    }
+    
+    const frameCount = 7;
+    
+    const images = [];
+    const imageSeq = {
+      frame: 1,
+    };
+    
+    for (let i = 0; i < frameCount; i++) {
+      const img = new Image();
+      img.src = files(i);
+      images.push(img);
+    }
+    
+    gsap.to(imageSeq, {
+      frame: frameCount - 1,
+      snap: "frame",
+      ease: `ease`,
+      scrollTrigger: {
+        scrub: 1,
+        trigger: ".page25",
+        //   set start end according to preference
+        start: `top top`,
+        end: `80% top`,
+        scroller: `body`,
+        // markers:true
+      },
+      onUpdate: render,
+    });
+    
+    images[1].onload = render;
+    
+    function render() {
+      scaleImage(images[imageSeq.frame], context);
+    }
+    
+    function scaleImage(img, ctx) {
+      var canvas = ctx.canvas;
+      var hRatio = canvas.width / img.width;
+      var vRatio = canvas.height / img.height;
+      var ratio = Math.min(hRatio, vRatio);
+      var centerShift_x = (canvas.width - img.width * ratio) / 2;
+      var centerShift_y = (canvas.height - img.height * ratio) / 2;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(
+        img,
+        0,
+        0,
+        img.width,
+        img.height,
+        centerShift_x,
+        centerShift_y,
+        img.width * ratio,
+        img.height * ratio
+      );
+    }
+    // Ensure GSAP is properly initialized and imported
+
+// Pin the canvas using GSAP
+ScrollTrigger.create({
+      trigger: ".page25",  // Use the canvas itself as the trigger
+      start: "top top",  // Start pinning when the top of the canvas reaches the top of the viewport
+      end: "80% top",  // Stop pinning when the bottom of the canvas reaches the top of the viewport
+      pin: true,
+      scroller:`body`,
+    //   markers:true
+  });
+  
+}
+canvas2();
+
+// Page27 Animation
+function pg27Animation(){
+  gsap.to(".page27 #imgtop",{
+    opacity:`0`,
+    ease:`ease`,
+    scrollTrigger:{
+        trigger:`.page27`,
+        start:`10% top`,
+        end:`50% 40%`,
+        scroller:`body`,
+        scrub:1,
+        // markers:true,
+    }
+  })
+}
+pg27Animation();
+
+// Page28 Animation
+function pg28Animation(){
+
+    var tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: `.page28`,
+            start: `10% top`,
+            end: `20% top`,
+            scroller: `body`,
+            scrub: 1,
+            // markers: true,
+        }
+    });
+    
+  tl.to(".page28 #img1",{
+    opacity:`0`,
+    ease:`ease`,
+  })
+  tl.to(".page28 #img2",{
+    opacity:`0`,
+    ease:`ease`,
+  })
+  tl.to(".page28 #img3",{
+    opacity:`0`,
+    ease:`ease`,
+  })
+}
+pg28Animation();
+
+// Page29 Animation
+function pg29Animation(){
+
+  gsap.to(".page29 img",{
+    width:`120%`,
+    y:`-100%`,
+    ease:`ease`,
+    scrollTrigger: {
+        trigger: `.page29`,
+        start: `20% 50%`,
+        end: `bottom top`,
+        scroller: `body`,
+        scrub: 1,
+        // markers: true,
+    }
+  })
+  gsap.to("#pg29Content",{
+    y:`-140%`,
+    ease:`ease`,
+    scrollTrigger: {
+        trigger: `.page29`,
+        start: `20% 50%`,
+        end: `bottom top`,
+        scroller: `body`,
+        scrub: 1,
+        // markers: true,
+    }
+  })
+}
+pg29Animation();
 
 }
 
@@ -1889,8 +2082,202 @@ function canvasBgpgsH3Animation() {
         });
     });
 }
-
 canvasBgpgsH3Animation();
+
+function swiperCode(){
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        speed:1000,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+}
+swiperCode();
+
+// Canvas2 code
+
+function canvas2(){
+    const canvas = document.querySelector("#canvas2");
+    const context = canvas.getContext("2d");
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    
+    window.addEventListener("resize", function () {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      render();
+    });
+    
+    function files(index) {
+      var data = `
+      https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/displays/parts_0007__b95s4g085uuu_large.png
+      https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/displays/parts_0006__enypileapsa6_large.png
+      https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/displays/parts_0004__fq0enfas7sia_large.png
+      https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/displays/parts_0003__cneophpf8hw2_large.png
+      https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/displays/parts_0002__fspgzjetnpm6_large.png
+      https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/displays/parts_0000__b5n7ez3p2seq_large.png
+      https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/displays/startframe__fk6tsxxwncyi_large.png
+     `;
+      return data.split("\n")[index];
+    }
+    
+    const frameCount = 7;
+    
+    const images = [];
+    const imageSeq = {
+      frame: 1,
+    };
+    
+    for (let i = 0; i < frameCount; i++) {
+      const img = new Image();
+      img.src = files(i);
+      images.push(img);
+    }
+    
+    gsap.to(imageSeq, {
+      frame: frameCount - 1,
+      snap: "frame",
+      ease: `ease`,
+      scrollTrigger: {
+        scrub: 1,
+        trigger: ".page25",
+        //   set start end according to preference
+        start: `top top`,
+        end: `80% top`,
+        scroller: `body`,
+        // markers:true
+      },
+      onUpdate: render,
+    });
+    
+    images[1].onload = render;
+    
+    function render() {
+      scaleImage(images[imageSeq.frame], context);
+    }
+    
+    function scaleImage(img, ctx) {
+      var canvas = ctx.canvas;
+      var hRatio = canvas.width / img.width;
+      var vRatio = canvas.height / img.height;
+      var ratio = Math.min(hRatio, vRatio);
+      var centerShift_x = (canvas.width - img.width * ratio) / 2;
+      var centerShift_y = (canvas.height - img.height * ratio) / 2;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(
+        img,
+        0,
+        0,
+        img.width,
+        img.height,
+        centerShift_x,
+        centerShift_y,
+        img.width * ratio,
+        img.height * ratio
+      );
+    }
+    // Ensure GSAP is properly initialized and imported
+
+// Pin the canvas using GSAP
+ScrollTrigger.create({
+      trigger: ".page25",  // Use the canvas itself as the trigger
+      start: "top top",  // Start pinning when the top of the canvas reaches the top of the viewport
+      end: "80% top",  // Stop pinning when the bottom of the canvas reaches the top of the viewport
+      pin: true,
+      scroller:`body`,
+    //   markers:true
+  });
+  
+}
+canvas2();
+
+// Page27 Animation
+function pg27Animation(){
+    gsap.to(".page27 #imgtop",{
+      opacity:`0`,
+      ease:`ease`,
+      scrollTrigger:{
+          trigger:`.page27`,
+          start:`10% top`,
+          end:`50% 40%`,
+          scroller:`body`,
+          scrub:1,
+          // markers:true,
+      }
+    })
+  }
+  pg27Animation();
+  
+  // Page28 Animation
+  function pg28Animation(){
+  
+      var tl = gsap.timeline({
+          scrollTrigger: {
+              trigger: `.page28`,
+              start: `10% top`,
+              end: `20% top`,
+              scroller: `body`,
+              scrub: 1,
+              // markers: true,
+          }
+      });
+      
+    tl.to(".page28 #img1",{
+      opacity:`0`,
+      ease:`ease`,
+    })
+    tl.to(".page28 #img2",{
+      opacity:`0`,
+      ease:`ease`,
+    })
+    tl.to(".page28 #img3",{
+      opacity:`0`,
+      ease:`ease`,
+    })
+  }
+  pg28Animation();
+  
+  // Page29 Animation
+  function pg29Animation(){
+  
+    gsap.to(".page29 img",{
+      width:`120%`,
+      y:`-100%`,
+      ease:`ease`,
+      scrollTrigger: {
+          trigger: `.page29`,
+          start: `20% 50%`,
+          end: `bottom top`,
+          scroller: `body`,
+          scrub: 1,
+          // markers: true,
+      }
+    })
+    gsap.to("#pg29Content",{
+      y:`-140%`,
+      ease:`ease`,
+      scrollTrigger: {
+          trigger: `.page29`,
+          start: `20% 50%`,
+          end: `bottom top`,
+          scroller: `body`,
+          scrub: 1,
+          // markers: true,
+      }
+    })
+  }
+  pg29Animation();
+
 }
 
 // Function to handle animation based on screen size 

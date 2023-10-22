@@ -516,6 +516,7 @@ video{
 #page12>img{
     position: absolute;
     z-index: 11;
+    transform: scale(1.2);
 }
 
 /* Canvas Styles */
@@ -524,10 +525,10 @@ canvas{
     width: 100%;
     height: 100vh;
     z-index: 10;
-    /* background-color: red; */
+    /* background-color: burlywood; */
 }
 #canvas1{
-    transform: scale(1.35);
+    transform: scale(1.3);
 }
 .canvasbgpgs{
     position: relative;
@@ -540,6 +541,7 @@ canvas{
 }
 #lefth3{
     position: absolute;
+    font-size: 1.3vw;
     line-height: 1.6vw;
     left: 10%;
     top: 50%;
@@ -554,6 +556,7 @@ canvas{
     top: 50%;
     transform: translate(0,-50%);
     width: 15%;
+    font-size: 1.3vw;
     z-index: 16;
     color: #9A9A9F;
 }
@@ -609,7 +612,7 @@ canvas{
     position: relative;
     width: 100%;
     min-height: 180vh;
-    background-color: red;
+    /* background-color: red; */
 }
 .pg20in{
     position: absolute;
@@ -646,6 +649,10 @@ canvas{
 .pg20inp2 button{
     position: absolute;
     bottom: 10%;
+}
+.pg20inp2 img{
+  width: 70vw ;
+  height: 58vw;
 }
 
 .page21{
@@ -692,8 +699,226 @@ canvas{
     background-size: cover;
     background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/visionos/spatial_interaction__br11mf88bzxy_large.jpg);
 }
+.page22 .staticpgContent{
+   height: 20vw;
+}
+.page23{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: gainsboro;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
 
+  .swiper-slide {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-button-next ,.swiper-button-prev{
+    color: white;
+    font-size: 2vw;
+    font-weight: 900;
+    margin: 0 2vw;
+  }
+  .pg23Content h1{
+    font-size: 2vw;
+  }
+  .pg23Content p{
+    width: 75%;
+  }
+  .page24{
+    width: 100%;
+    height: 100vh;
+  }
+  .pg24Content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .pg24Content h3{
+    font-size: 2vw;
+    margin-bottom: 1.7vw;
+    color: white;
+  }
+  .pg24Content h1{
+    color: white;
+    font-size: 5.5vw;
+    line-height: 5.5vw;
+  }
+  .pg24Content span{
+    color: white;
+  }
+  .pg24Content p{
+    margin-top: 3vw;
+    font-size: 1.5vw;
+    width: 51%;
+    color: #86868B;
+    line-height: 1.9vw;
+  }
+
+  .page25{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+  }
+
+  #canvas2{
+    transform: scale(0.6);
+    top: 0;
+  }
+  .pg25Content{
+    position: absolute;
+    bottom: 5%;
+    width: 50%;
+    height: 15vw;
+    text-align: center;
+  }
+  .pg25Content h1{
+    color: white;
+    font-size: 2.1vw;
+    margin-bottom: 2vw;
+  }
+  .pg25Content h3{
+    color: #86868B;
+    font-size: 1.5vw;
+    margin-bottom: 2vw;
+  }
+  .pg25Content span{
+    color: white;
+  }
+  .page26{
+    position: relative;
+    width: 100%;
+    height: 150vh;
+  }
+  .pg26Content{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    width: 30%;
+    height: 40vw;
+    /* background-color: red; */
+  }
+  .pg26Content h1{
+    color: white;
+    font-size: 2vw;
+    line-height: 2.5vw;
+  }
+  .pg26Content h3{
+    width: 80%;
+    margin-top: 3vw;
+    color:#86868B;
+    font-size: 1.3vw;
+    line-height: 2vw;
+  }
+  .pg26Content span{
+    color: white;
+  }
+  .page27,.page28{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 140vh;
+    background-color: black;
+  }
+  .page27 img{
+    position: absolute;
+    margin-bottom: 5vw;
+    width: 63vw;
+    height: 33vw;
+  }
+  .page28 img{
+    position: absolute;
+    margin-bottom: 5vw;
+    width: 67vw;
+    height: 33vw;
+  }
+  .pg27Content {
+    position: absolute;
+    bottom: 0%;
+    width: 50%;
+    text-align: center;
+    height: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+  }
+  .pg27Content h1{
+    color: white;
+    font-size: 2vw;
+  }
+  .pg27Content h3{
+    width: 80%;
+    margin-top: 2vw;
+    color:#86868B;
+    font-size: 1.3vw;
+    line-height: 2vw;
+    /* background-color: yellow; */
+  }
+  .pg27Content span{
+    color: white;
+  }
+  .page29{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150vh;
+    background-color: black;
+  }
+  .page29 img {
+    opacity: 80%;
+  }
+  .page29 button{
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.7vw 2vw;
+    margin-top: 2vw;
+  }
+  .page29 button h2{
+    font-size: 1.5vw;
+    color: black;
+  }
+  .page29 h2 span{
+    color: black;
+    font-size: 1.2vw;
+  }
 
 
 
@@ -823,7 +1048,7 @@ canvas{
         font-size: 2vw;
     }
     #pg12img{
-        transform: scale(0.8);
+     scale: 0.8;
     }
     .canvasbgpgs h3{
         font-size: 1.5vw;
@@ -857,6 +1082,7 @@ canvas{
         margin-top: 25vw;
         padding-bottom: 0;
         width: 90%;
+        height: 75vw;
     }
     .page20 button{
         bottom: -15%;
@@ -873,5 +1099,59 @@ canvas{
         height: 50vh;
         width: 90%;
         margin-top: 6vw;
+    }
+    .page22 .staticpgContent{
+        height: 55vw;
+    }
+    .page27{
+        height: 110vh;
+    }
+    .pg27Content{
+        width: 60%;
+        height: 20vw;
+        /* background-color: red; */
+    }
+    .pg27Content h1{
+        font-size: 3vw;
+    }
+    .pg27Content h3{
+        width: 90%;
+        font-size: 2vw;
+        line-height: 2.5vw;
+    }
+    .page28{
+        height: 120vh;
+    }
+    .page28{
+        height: 120vh;
+    }
+    .page28 img{
+        width: 80vw;
+        height: 42vw;
+    }
+    .page29{
+        height: 110vh;
+    }
+    .page29 img{
+        width: 80vw;
+        height: 60vw;
+    }
+    #pg29Content{
+        height: 25vw;
+        width: 70%;
+    }
+    #pg29Content h1{
+        font-size: 3vw;
+        margin-bottom: 1.5vw;
+    }
+    #pg29Content h3{
+        font-size: 2vw;
+        margin-bottom: 1.5vw;
+    }
+    #pg29Content h2{
+        font-size: 2.5vw;
+    }
+    #pg29Content span{
+        font-size: 1.6vw;
     }
 }
