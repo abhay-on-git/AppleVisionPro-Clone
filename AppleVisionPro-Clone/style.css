@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: head;
+    font-family: head , Helvetica, sans-serif;
 }
 html,body{
     width: 100%;
@@ -61,7 +61,7 @@ main{
 }
 .page1in .pg1-title img{
     width: 26vw;
-    height: 4.3vw;
+    height: 6vmax;
 }
 nav{
     position: fixed;
@@ -328,7 +328,6 @@ video{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: yellow; */
     overflow: hidden; 
 }
 .pg6btn{
@@ -587,14 +586,23 @@ canvas{
 .pg19inp1a{
     width: 45%;
     height: 90%;
-    background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/design/glass_top__k3b8lzqd1l2m_large.jpg);
-    background-size: cover;
 }
-.pg19inp1b{
+.pg19inp1a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center;
+}
+.pg19inp1b {
+    padding-bottom:7vmax;
     width: 45%;
     height: 90%;
-    background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/design/glass_side__gm4agomrwl2e_large.jpg);
-    background-size: cover;
+}
+.pg19inp1b img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center;
 }
 .pg19inp2{
     width: 100%;
@@ -689,15 +697,23 @@ canvas{
 .page22img1{
     width: 45%;
     height: 90vh;
-    background-color: beige;
-    background-size: cover;
-    background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/visionos/scaling_ui__gosi0305um2y_large.jpg);
+    /* background-color: beige; */
+}
+.page22img1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center;
 }
 .page22img2{
     width: 45%;
     height: 90vh;
-    background-size: cover;
-    background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/visionos/spatial_interaction__br11mf88bzxy_large.jpg);
+}
+.page22img2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center;
 }
 .page22 .staticpgContent{
    height: 20vw;
@@ -726,7 +742,8 @@ canvas{
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    padding: 8vmax;
+    object-fit: contain;
   }
 
   .swiper {
@@ -736,6 +753,7 @@ canvas{
   .swiper-button-next ,.swiper-button-prev{
     color: white;
     font-size: 2vw;
+    color: black;
     font-weight: 900;
     margin: 0 2vw;
   }
